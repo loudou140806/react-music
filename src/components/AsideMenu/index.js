@@ -13,7 +13,7 @@ class AsideMenu extends Component {
     }
   render() {
     return (
-        <div  className="aside-menu">
+        <div  className="aside-menu" style={{"display":"none"}}>
             <i onClick={this.showAsideMenu} className="iconfont icon-back"></i>
             <div className="aside">
                 <div style={{'backgroundColor': 'skinColor'}} className="info">
