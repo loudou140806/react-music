@@ -11,7 +11,7 @@ class About extends Component {
     render() {
         return (
         <div className="about" style={{"display":"none"}}>
-            <i onClick={this.showAbout} className="close"></i>
+            <i onClick={this.showAbout} className="iconfont icon-close"></i>
             <div className="about-content">
                 <h1>关于</h1>
             </div>

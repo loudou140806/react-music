@@ -1,10 +1,10 @@
 import React from 'react';
 import {Router, Route } from 'react-router-dom';
 import createHashHistory from 'history/createHashHistory';
-import Home from '../components/home';
-import One from '../components/one';
-import Search from '../components/search';
-import Mine from '../components/mine';
+import Home from '../components/Home';
+import MusicList from '../components/MusicList';
+import Find from '../components/Find';
+import Social from '../components/Social';
 
 const history = createHashHistory();
 
@@ -13,9 +13,9 @@ function Routes() {
         <Router history={history}>
             <div>
                 <Route path='/' component={Home}/>
-                <Route path='/one' component={One}/>
-                <Route path='/search' component={Search} />
-                <Route path='/mine' component={Mine} />
+                <Route path='/music-list' component={MusicList}/>
+                <Route path='/find' component={Find} />
+                <Route path='/social' component={Social} />
             </div>
         </Router>
     );
