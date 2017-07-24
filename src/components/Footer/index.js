@@ -13,6 +13,9 @@ class Footer extends Component {
     this.play = () => {
       alert('play');
     }
+    this.changeTime = () => {
+      alert('changeTime');
+    }
   }
   render() {
     return (
