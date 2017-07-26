@@ -13,10 +13,8 @@
     width: 100%;
     height: 70px;
     text-align: center;
-    // position: fixed;
-    // bottom: 0;
 
-    .mini-music {
+    .mini-music {   
       display: flex;
       height: 70px;
       line-height: 70px;
@@ -49,22 +47,19 @@
           line-height: 40px;
           overflow: hidden;
           white-space: nowrap;
-          // cursor: pointer;
         }
         .progress {
           position: absolute;
           width: 100%;
-          top: 10px;
+          top: 0;
           left: 0;
           span.start {
             position: absolute;
             left: 6px;
-            // padding-right: 5px;
           }
           span.end {
             position: absolute;
             right: 4px;
-            // padding-left: 5px;
           }
           @media screen and(min-width: 600px) {
             span.start {
@@ -91,7 +86,6 @@
               left: 0;
               display: inline-block;
               max-width: 100%;
-              // width: 70%;
               height: 5px;
               background-color: #31c27c;
             }

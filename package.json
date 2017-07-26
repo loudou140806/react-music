@@ -96,5 +96,11 @@
   "eslintConfig": {
     "extends": "react-app"
   },
-  "homepage": "http://loudou140806.github.com/react-music"
+  "homepage": "http://loudou140806.github.com/react-music",
+  "proxy": {
+    "/api/*": {
+          "target": "https://cnodejs.org/",
+          "secure": false
+      }
+  }
 }

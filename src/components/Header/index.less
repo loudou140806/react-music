@@ -1,7 +1,6 @@
 .header {
     background-color: #B72712;
     color: white;
-    flex: 1;
     width: 100%;
 
     .name {
@@ -14,16 +13,10 @@
 
       span.func {
         flex: 1;
-        position: relative;
-
+        text-align: left;
         i {
-          display: inline-block;
-          position: absolute;
-          width: 20px;
-          height: 20px;
-          left: 15px;
-          bottom: 0;
-          background-size: contain;
+          font-size:20px;
+          margin-left:10px;
           cursor: pointer;
         }
       }
@@ -31,17 +24,12 @@
         flex: 1;
       }
       span.search {
-        position: relative;
+        text-align: right;
         flex: 1;
 
         i {
-          display: inline-block;
-          position: absolute;
-          width: 20px;
-          height: 20px;
-          right: 15px;
-          bottom: 0;
-          background-size: contain;
+          font-size: 20px;
+          margin-right:10px;
           cursor: pointer;
         }
       }
@@ -50,6 +38,7 @@
     .tab {
       display: flex;
       border-bottom: 1px solid #9E9E9E;
+      vertical-align: top;
 
       a {
         display: inline-block;
