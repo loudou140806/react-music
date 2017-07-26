@@ -3,15 +3,24 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import action from '../../actions';
 import './index.less';
-import Lists from '../../assets/music.json';
 
 class MusicList extends Component {
+  constructor(props) {
+    super(props);
+    this.del = (index) => {
+      console.log(index);
+      this.props.actions.deleteMusic(index);
+    }
+  }
   render() {
+    const {musicList} = this.props.state;
+    console.log(this.props.state);
     return (
       <div>
-        {Lists.musicData.map((item, index) => {
-          return <Item key={index} index={index} name={item.name} src={item.src} imgSrc={item.musicImgSrc}/>
+        {musicList.map((item, index) => {
+          return <Item key={index} index={index} name={item.name} src={item.src} imgSrc={item.musicImgSrc} del={this.del}/>
         })}
+        <div className="tips"></div>
       </div>
     );
   }
@@ -19,15 +28,17 @@ class MusicList extends Component {
 
 class Item extends Component {
   render() {
+    const {imgSrc, name} = this.props;
+    const index = this.props.index;
     return (
       <div className="music-item">
-        <img className="item-img" src={this.props.imgSrc}></img>
+        <img className="item-img" alt="" src={imgSrc}></img>
         <div className="item-content">
-          <span>{this.props.index}.</span>
-          <span>{this.props.name}</span>
+          <span>{index+1}.</span>
+          <span>{name}</span>
         </div>
         <div className="item-operate">
-          <i className="iconfont icon-delete"></i>
+          <i className="iconfont icon-delete" onClick={() => {this.props.del(index)}}></i>
         </div>
       </div>
     );
@@ -36,7 +47,7 @@ class Item extends Component {
 
 export default connect(
   state => {
-    return {state: state.fetchMusic}
+    return {state: state.musicList}
   },
   dispatch => {
     return {actions: bindActionCreators(action, dispatch)}
