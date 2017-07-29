@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import action from '../../actions';
 import './index.less';
+import Tips from '../Tips';
 
 class MusicList extends Component {
   constructor(props) {
@@ -20,7 +21,7 @@ class MusicList extends Component {
         {musicList.map((item, index) => {
           return <Item key={index} index={index} name={item.name} src={item.src} imgSrc={item.musicImgSrc} del={this.del}/>
         })}
-        <div className="tips"></div>
+        <Tips tips="没有更多歌曲了~"/>
       </div>
     );
   }
@@ -31,7 +32,7 @@ class Item extends Component {
     const {imgSrc, name} = this.props;
     const index = this.props.index;
     return (
-      <div className="music-item">
+      <div className="music-item border-bottom">
         <img className="item-img" alt="" src={imgSrc}></img>
         <div className="item-content">
           <span>{index+1}.</span>

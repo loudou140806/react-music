@@ -18,15 +18,9 @@ class Header extends Component {
                     <span className="search"><i onClick={this.toSearch} className="iconfont icon-search"></i></span>
                 </div>
                 <div className="tab">
-                    <div className="item">
-                        <NavLink to="/music-list">我的</NavLink>
-                    </div>
-                    <div className="item">
-                        <NavLink to="/find">发现</NavLink>
-                    </div>
-                    <div className="item">
-                        <NavLink to="/social">一个</NavLink>
-                    </div>
+                    <NavLink to="/music-list" className="item" activeClassName="activeTab">我的</NavLink>
+                    <NavLink to="/find" className="item" activeClassName="activeTab">发现</NavLink>
+                    <NavLink to="/social" className="item" activeClassName="activeTab">一个</NavLink>
                 </div>
             </div>
         );

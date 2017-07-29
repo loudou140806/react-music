@@ -99,7 +99,7 @@
   "homepage": "http://loudou140806.github.com/react-music",
   "proxy": {
     "/api/*": {
-          "target": "https://cnodejs.org/",
+          "target": "https://microzz.com:3000",
           "secure": false
       }
   }

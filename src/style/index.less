@@ -10,15 +10,61 @@ html, body {
   overflow: hidden;
 }
 
-@media screen and(min-width: 769px) {
-  html, body {
-    width: 460px;
-    margin: 0 auto;
-  }
+//1px边框
+.border-left:after{
+    content:'';
+    display: block;
+    width:1px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    transform: scaleY(0.5);
+    transform-origin:0 0;
+    overflow: hidden;
+    background: #666;
+}
 
-  body{
-    box-shadow: 0 0 30px gray;
-  }
+.border-right:after{
+    content:'';
+    display: block;
+    width:1px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transform: scaleY(0.5);
+    transform-origin:0 0;
+    background: #666;
+    overflow: hidden;
+}
+
+.border-bottom:after{
+    content:'';
+    display: block; 
+    height:1px;
+    position: absolute;
+    left: 0;
+    right:0;
+    bottom: 0;
+    transform: scaleY(0.5);
+    transform-origin:0 0;
+    background: #666;
+    overflow: hidden;
+}
+
+.border-top:after{
+    content:'';
+    display: block;
+    height:1px;
+    position: absolute;
+    left: 0;
+    right:0;
+    top: 0;
+    transform: scaleY(0.5);
+    transform-origin:0 0;
+    background: #666;
+    overflow: hidden;
 }
 
 a {
@@ -28,17 +74,6 @@ a {
   cursor: pointer;
 }
 
-a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  height: 2px;
-  background-color: #3F51B5;
-  transform: scaleX(0);
-  transition: .3s ease-in-out;
-}
 a:hover::after {
   transform: scaleX(1);
   transition: .3s ease-in-out;
@@ -129,6 +164,6 @@ a:hover::after {
 
 .icon-huiyuan:before { content: "\e606"; }
 
+.icon-del:before { content: "\e625"; }
 
-
-
+.icon-cancel:before { content: "\e72f"; }
